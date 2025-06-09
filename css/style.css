@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cinzel";
+}
+
+body {
+    margin: 20px;
+    background-color: color-mix(in lch, rgb(194, 124, 194), pink);
+}
+
+main {
+    max-width: 1000px;
+    width: 90%;
+    background-color: rgba(156, 17, 17, 0.46);
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(95, 19, 19, 0.448) 0px 2px 4px, rgba(57, 21, 21, 0.32) 0px 2px 16px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 45%;
+    background-color: rgba(128, 31, 31, 0.804);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 12pt;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card > img {
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 3/2;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1{
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.card1 > p { margin-top: 22px; }
+.card2 > p { margin-top: 22px; }
+.card3 > p { margin-top: 22px; }
+.card4 > p { margin-top: 10px; }
+
+#audio {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside {
+    font-size: 12pt;
+    background-color: rgba(106, 44, 2, 0.725);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+button {
+    width: 88%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #fff; 
+    background: linear-gradient(90deg, #8e0000, #030d5c);
+    margin: 15px auto;
+    display: block;
+    transition: 0.5s background;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #030d5ce2, #8e0000eb);
+}
+
+button:active {
+    background: linear-gradient(90deg, #03a9f4, #d4b331d4, #162abf, #89008e);
+}
+
+footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: rgb(115, 19, 163);
+}
+
+.card1 img:hover { animation: slideIn 2s infinite; }
+@keyframes slideIn {
+    0% { transform: translateX(-50%); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+.card2 img:hover { animation: FadeIn 2s infinite; }
+@keyframes FadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.card3 img:hover { animation: pulse 2s infinite; }
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.card4 img:hover { animation: bounce 2s infinite; }
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+
+    aside {
+        width: 90%;
+    }
+
+    #audio {
+        width: 90%;
+        text-align: center;
+    }
+}
